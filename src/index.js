@@ -233,9 +233,21 @@ function whack(event) {
   return points;
 }
 
+/**
+ * Play sound on whack
+ */
 function myPlay(){
-  const audio = new Audio("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hit.mp3?raw=true'");
+  const audio = new Audio('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hit.mp3?raw=true');
   audio.play();
+}
+
+/**
+ * Play music on start
+ */
+
+function playSong(){
+  const song = new Audio('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/molesong.mp3?raw=true');
+  song.play();
 }
 
 /**
@@ -282,6 +294,7 @@ function stopGame(){
 *
 */
 function startGame(){
+  playSong()
   clearScore();
   setDuration(10);
   showUp();
