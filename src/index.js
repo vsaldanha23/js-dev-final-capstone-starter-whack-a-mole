@@ -228,8 +228,14 @@ function startTimer() {
 */
 function whack(event) {
   // TODO: Write your code here.
+  myPlay();
   updateScore();
   return points;
+}
+
+function myPlay(){
+  const audio = new Audio("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hit.mp3?raw=true'");
+  audio.play();
 }
 
 /**
