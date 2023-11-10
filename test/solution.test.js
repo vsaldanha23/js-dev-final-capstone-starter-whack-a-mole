@@ -305,3 +305,20 @@ describe("US-05: startTimer() and updateTimer()", () => {
     expect(startGame).toContain("startTimer()");
   });
 });
+
+  describe("US-06: Originality - Audio FX and music ", () => {
+    it("should have playSound() inside whack()", async() => {
+      const whack = await page.evaluate(() => {
+        return window.whack.toString();
+      });
+      expect(whack).toContain("playSound()");
+    });
+
+    it("should have playSong() inside startGame()", async() => {
+      const startGame = await page.evaluate(() => {
+        return window.startGame.toString();
+      });
+      expect(startGame).toContain("playSong()");
+    });
+
+  });
